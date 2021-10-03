@@ -194,14 +194,15 @@ margin: 0;
   margin-right: 10px;
 }
 
-.mail-icon:hover {
+.contact-link:hover .phone-icon,
+.contact-link:focus .phone-icon {
   fill: var(--accent-color);
 }
 
-.phone-icon:hover {
+.contact-link:hover .mail-icon,
+.contact-link:focus .mail-icon {
   fill: var(--accent-color);
 }
-
 /* hero */
 
 .hero {
@@ -281,6 +282,12 @@ text-align: center; */
   margin-right: 30px;
 }
 
+.benefit-icon {
+  background-color: var(--bgc-light);
+  padding: 25px 100px;
+  margin-bottom: 30px;
+}
+
 /* функциии */
 
 .feature {
@@ -358,9 +365,7 @@ text-align: center; */
 .social-link {
   width: 44px;
   height: 44px;
-
   display: block;
-  /* background-color: red; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -416,9 +421,8 @@ text-align: center; */
 
 /* футер */
 
-/* .footer-social-links {
-  display: flex;
-} */
+.footer-social-links {
+}
 
 .footer-social-title {
   text-transform: uppercase;
@@ -440,6 +444,7 @@ footer {
   font-size: 14px;
   line-height: 1.71;
   font-style: normal;
+  /* margin-right: 70px; */
 }
 
 .address-details {
@@ -458,6 +463,12 @@ footer {
 .contact-footer:hover,
 .contact-footer:focus {
   color: var(--accent-color);
+}
+
+.footer-social-icon {
+  /* width: 20px;
+  height: 20px; */
+  fill: var(--white-color);
 }
 
 /* Стили для portfolio.html  */
@@ -535,4 +546,10 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+.portfolio-elements:hover,
+.portfolio-elements:focus {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
