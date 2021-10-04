@@ -104,7 +104,8 @@ margin: 0;
 
 .site-nav .link,
 .contact-list .contact-link {
-  display: block;
+  display: flex;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -253,6 +254,7 @@ margin: 0;
 align-items: center;
 text-align: center; */
   letter-spacing: 0.06em;
+  cursor: pointer;
 }
 .button:hover,
 .button:focus {
@@ -320,14 +322,14 @@ text-align: center; */
   color: var(--title-text-color);
   font-size: 16px;
   line-height: 1.18;
-  margin-top: 30px;
+  /* margin-top: 30px; */
   margin-bottom: 10px;
   /* text-align: center; */
 }
 
 .team-employoee-position {
-  margin-bottom: 30px;
-  /* margin-bottom: 16px; */
+  /* margin-bottom: 30px; */
+  margin-bottom: 16px;
 }
 
 .team-list {
@@ -340,10 +342,15 @@ text-align: center; */
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   text-align: center;
+  /* padding-bottom: 30px; */
 }
 
 .team-dudes:not(:last-child) {
   margin-right: 30px;
+}
+
+.team-wrapper {
+  padding: 30px 0;
 }
 
 .benefit-title,
@@ -372,7 +379,9 @@ text-align: center; */
 }
 
 .social-link:hover,
-.social-link:focus {
+.social-link:focus,
+.footer-social-link:hover,
+.footer-social-link:focus {
   background-color: var(--accent-color);
   border-radius: 50%;
 }
@@ -396,12 +405,7 @@ text-align: center; */
 
 .client-icon {
   fill: var(--icon-color);
-  margin: 16px 32px;
-}
-
-.client-icon:hover,
-.client-icon:focus {
-  fill: var(--accent-color);
+  /* margin: 16px 32px; */
 }
 
 .clients-list {
@@ -410,17 +414,34 @@ text-align: center; */
   justify-content: center;
 }
 .client-item {
+}
+
+.client-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.client-link {
+  display: flex;
+  width: 170px;
+  height: 92px;
+  align-items: center;
+  justify-content: center;
   border: 1px solid var(--icon-color);
   box-sizing: border-box;
   border-radius: 4px;
 }
 
-.client-item:not(:last-child) {
-  margin-right: 50px;
+.client-link:hover,
+.client-link:focus {
+  border: 1px solid var(--accent-color);
+}
+
+.client-link:hover .client-icon,
+.client-link:focus .client-icon {
+  fill: var(--accent-color);
 }
 
 /* футер */
-
 .footer-social-links {
 }
 
@@ -432,10 +453,19 @@ text-align: center; */
   margin-bottom: 20px;
 }
 
-footer {
-  display: flex;
+.full-footer {
+  /* display: flex; */
   background-color: var(--bgc-darck);
   padding: 60px 0;
+}
+
+.footer {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-contacts {
+  margin-right: 70px;
 }
 
 .address {
@@ -455,7 +485,8 @@ footer {
   margin-bottom: 9px;
 }
 
-.contact-footer {
+.mail-footer,
+.phone-footer {
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
 }
@@ -466,9 +497,17 @@ footer {
 }
 
 .footer-social-icon {
-  /* width: 20px;
-  height: 20px; */
   fill: var(--white-color);
+}
+
+.footer-social-link {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
 }
 
 /* Стили для portfolio.html  */
