@@ -561,6 +561,8 @@ text-align: center; */
 .portfolio {
   display: flex;
   flex-wrap: wrap;
+  margin-right: -30px;
+  margin-bottom: -30px;
 }
 
 .portfolio-wrapper {
@@ -570,6 +572,7 @@ text-align: center; */
 .portfolio-elements {
   margin-right: 30px;
   margin-bottom: 30px;
+  flex-basis: calc(100% / 3 - 30px);
 }
 
 .portfolio-elements:nth-child(3n) {
